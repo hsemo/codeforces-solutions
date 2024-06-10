@@ -16,11 +16,15 @@ def handle_test_case():
     a = int_input()
     x = int_input()
 
-    for i in range(q):
-        xi2 = 1 << x[i]
-        for j in range(n):
-            if a[j] % xi2 == 0:
-                a[j] += 1 << (x[i] - 1)
+    s = []
+    for i in x:
+        if i not in s:
+            s.append(i)
+
+    for j in range(n):
+        for i in range(len(s)):
+            if a[j] % (1 << s[i]) == 0: # 1 << x = 2^x
+                a[j] += 1 << (s[i] - 1)
 
     for j in range(n - 1):
         print(a[j], end = ' ')
