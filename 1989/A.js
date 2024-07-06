@@ -25,12 +25,13 @@ function readline() {
 
 //---------------------------------------------------------------------
 function main(){
-    let tests = parseInt(readline());
-    while(tests-- > 0){
-        handleTestCase();
+    let n = parseInt(readline());
+    while(n-- > 0){
+        let [xi, yi] = readline().split(' ').map((num) => parseInt(num));
+        if(yi == 0 || yi >= xi){
+            print('YES');
+            continue;
+        }
+        print('NO');
     }
-}
-
-function handleTestCase(){
-
 }

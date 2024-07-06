@@ -32,5 +32,6 @@ function main(){
 }
 
 function handleTestCase(){
-
+    let [n, k] = readline().split(' ').map((str) => parseInt(str));
+    print(k * (n - 1) + 1);
 }

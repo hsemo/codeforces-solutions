@@ -32,5 +32,18 @@ function main(){
 }
 
 function handleTestCase(){
+    let n = parseInt(readline());
+    let a = readline().split(' ');
+
+    // o = {number: cost}
+    let o = {};
+
+    a[0] = parseInt(a[0]);
+    for(let i=1; i<n; i++){
+        a[i] = parseInt(a[i]);
+        if(a[i] < a[i-1]){
+            o[a[i]] = a[i-1] - a[i];
+        }
+    }
 
 }

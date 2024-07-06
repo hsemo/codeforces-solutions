@@ -32,5 +32,24 @@ function main(){
 }
 
 function handleTestCase(){
+    let n = parseInt(readline());
+    let optimalX = 0;
+    let optimalSum = 0;
+    let sum = 0;
+    for(let x = 2; x <= n; x++){
+        for(let k = 1; k<=n; k++){
+            let t = k*x;
+            if(k*x > n){
+                break;
+            }
+            sum += t;
+        }
+        if(sum > optimalSum){
+            optimalSum = sum;
+            optimalX = x;
+        }
+        sum = 0;
+    }
 
+    print(optimalX);
 }

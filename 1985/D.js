@@ -32,5 +32,6 @@ function main(){
 }
 
 function handleTestCase(){
+    let [n,m] = readline().split(' ').map((num) => parseInt(num));
 
 }

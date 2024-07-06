@@ -32,5 +32,11 @@ function main(){
 }
 
 function handleTestCase(){
-
+    let [a,b] = readline().split(' ');
+    if(a !== b){
+        let t = b[0] + a.slice(1);
+        b = a[0] + b.slice(1);
+        a = t;
+    }
+    print(a + ' ' + b);
 }
